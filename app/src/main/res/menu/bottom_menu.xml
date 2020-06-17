@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_transaction"
+        android:icon="@drawable/transaction_icn"
+        android:title="Transaction"/>
+
+
+    <item
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/add_icn"
+        android:title="Add Item"/>
+
+    <item
+        android:id="@+id/navigation_pay"
+        android:icon="@drawable/pay_icn"
+        android:title="Pay Cash"/>
+
+    <item
+        android:id="@+id/navigation_discard"
+        android:icon="@drawable/discard_icn"
+        android:title="Discard Transaction"/>
+
+</menu>

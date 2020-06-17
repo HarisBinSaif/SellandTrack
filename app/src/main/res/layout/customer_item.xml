@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/border"
+    >
+
+
+    <TextView
+        android:id="@+id/cust_name"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hassan Tasir"
+        android:textColor="@color/basic"
+        android:textSize="20dp"
+        android:fontFamily="@font/roboto_bold"
+        />
+
+    <TextView
+        android:id="@+id/cust_id"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer ID: 03014054605"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/roboto"
+        />
+
+
+</LinearLayout>

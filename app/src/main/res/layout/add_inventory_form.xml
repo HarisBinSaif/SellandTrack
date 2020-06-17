@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/welcome_bg"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to Inventory"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:fontFamily="@font/bitter_bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/item_code"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/item_code_edittext"
+            android:fontFamily="@font/roboto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/white"
+            android:ems="15"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/quantity"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/item_qty_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/white"
+            android:ems="15"
+            android:fontFamily="@font/roboto"
+            android:inputType="number"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/whitebutton"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/bitter_bold"
+        android:stateListAnimator="@null"
+        android:text="Add"
+        android:textColor="@color/basic"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

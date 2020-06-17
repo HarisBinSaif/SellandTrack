@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "495631090563",
+    "firebase_url": "https://sell-and-track.firebaseio.com",
+    "project_id": "sell-and-track",
+    "storage_bucket": "sell-and-track.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495631090563:android:22b0019fa8db0d40f6ecb6",
+        "android_client_info": {
+          "package_name": "com.beyond.sellandtrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495631090563-plk4dic0hbiqhef3e0j5bc1u37htg0q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBDNPVddQbztThxrXhnedO-YL9YmWejHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495631090563-plk4dic0hbiqhef3e0j5bc1u37htg0q3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
