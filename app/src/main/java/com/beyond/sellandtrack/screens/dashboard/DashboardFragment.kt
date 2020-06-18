@@ -40,9 +40,7 @@ class DashboardFragment : Fragment() {
         }
 
         binding.transaction.setOnClickListener {
-            dashboardViewModel.signOut()
-            findNavController().navigate(R.id.action_dashboardFragment_to_welcomeFragment)
-
+            findNavController().navigate(R.id.action_dashboardFragment_to_transactionFragment)
         }
 
         binding.inventory.setOnClickListener {
@@ -51,6 +49,19 @@ class DashboardFragment : Fragment() {
 
         binding.customers.setOnClickListener {
             findNavController().navigate(R.id.action_dashboardFragment_to_customersFragment)
+        }
+
+        binding.Profile.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_profileFragment)
+        }
+
+
+        binding.journal.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_journalFragment)
+        }
+
+        binding.returnn.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_returnFragment)
         }
 
         return binding.root

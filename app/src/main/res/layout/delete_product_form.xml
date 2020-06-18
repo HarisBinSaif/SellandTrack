@@ -45,7 +45,7 @@
             android:layout_marginBottom="15dp"
             android:backgroundTint="@color/basic"
             android:ems="15"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
 
 

@@ -12,8 +12,9 @@ import com.beyond.sellandtrack.data.dataClasses.Customer
 import com.beyond.sellandtrack.data.dataClasses.Product
 import com.beyond.sellandtrack.screens.inventory.InventoryAdapter
 
+
 class CustomersAdapter internal constructor(
-        context: Context?
+        context: Context?, val itemClickListener: OnItemClickListener
 ) : RecyclerView.Adapter<CustomersAdapter.CustomerViewHolder>(){
 
     private val inflater : LayoutInflater = LayoutInflater.from(context)
@@ -33,6 +34,10 @@ class CustomersAdapter internal constructor(
         val current = customers[position]
         holder.customerNameTextView.text = current.name
         holder.customerIDTextView.text=  current.number
+
+        holder.itemView.setOnClickListener {
+            itemClickListener.onItemClicked(current)
+        }
     }
 
     internal fun setInventory(customers: List<Customer>){
@@ -41,4 +46,8 @@ class CustomersAdapter internal constructor(
     }
 
     override fun getItemCount() = customers.size
+}
+
+interface OnItemClickListener{
+    fun onItemClicked(customer :Customer)
 }

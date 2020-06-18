@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 
 class InventoryViewModel(application: Application): AndroidViewModel(application) {
 
+    private var productsList : MutableList<Product> = mutableListOf()
     private lateinit var repository: Repository
     var inventory : MutableLiveData<List<Product>> = MutableLiveData()
 
@@ -21,20 +22,20 @@ class InventoryViewModel(application: Application): AndroidViewModel(application
     }
 
 
-    fun getProducts(): MutableLiveData<List<Product>> {
+    fun getProducts() = viewModelScope.launch{
+
         repository.getProducts().addSnapshotListener(EventListener<QuerySnapshot>{value,e->
             if(e!=null){
                 return@EventListener
             }
 
-            var productsList : MutableList<Product> = mutableListOf()
+            productsList = mutableListOf()
             for (doc in value!!){
                 var product = doc.toObject(Product::class.java)
                 productsList.add(product)
             }
             inventory.value = productsList
         })
-        return inventory
     }
 
     fun changeQuantity(item_code:String, new_qty:String) = viewModelScope.launch {

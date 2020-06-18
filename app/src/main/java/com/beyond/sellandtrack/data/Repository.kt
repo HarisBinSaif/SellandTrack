@@ -36,23 +36,18 @@ class Repository {
         return user!!.uid
     }
 
+    fun signOut() {
+        auth.signOut()
+    }
+
 
     suspend fun addProduct(product: Product) {
         firestoreDB.collection("products").document(product.item_code!!).set(product)
     }
 
-    fun getProducts(): Query {
+    suspend fun getProducts(): Query {
         val reference = firestoreDB.collection("products").whereEqualTo("userId", getUserUid())
         return reference
-    }
-
-
-    suspend fun addCustomer(customer: Customer) {
-        firestoreDB.collection("customers").document(customer.number).set(customer)
-    }
-
-    fun signOut() {
-        auth.signOut()
     }
 
     suspend fun changeQuantity(itemCode: String, newQty: String) {
@@ -63,8 +58,23 @@ class Repository {
         firestoreDB.collection("products").document(itemCode).delete()
     }
 
-    fun getCustomers(): Query {
+
+    suspend fun addCustomer(customer: Customer) {
+        firestoreDB.collection("customers").document(customer.number).set(customer)
+    }
+
+    suspend fun getCustomers(): Query {
         val reference = firestoreDB.collection("customers").whereEqualTo("uid", getUserUid())
         return reference
     }
+
+    suspend fun deleteCustomer(number: String) {
+        firestoreDB.collection("customers").document(number).delete()
+    }
+
+    suspend fun getProductInfo(itemCode: String): Query {
+       return firestoreDB.collection("products").whereEqualTo("item_code","1004")
+    }
+
+
 }

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <layout>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".screens.customers.CustomersFragment">
+        tools:context=".screens.journal.JournalFragment">
 
         <LinearLayout
             android:layout_marginTop="40dp"
@@ -15,7 +17,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Customers"
+                android:text="Journal"
                 android:textColor="@color/basic"
                 android:fontFamily="@font/bitter_bold"
                 android:textSize="25dp"
@@ -28,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                tools:listitem="@layout/customer_item"
+                tools:listitem="@layout/journal_item"
                 />
         </LinearLayout>
 
@@ -39,7 +41,7 @@
             android:layout_gravity="bottom|right"
             android:layout_margin="16dp"
             android:backgroundTint="@color/basic"
-            app:srcCompat="@drawable/add_icn"/>
+            app:srcCompat="@drawable/return_png"/>
 
     </FrameLayout>
 

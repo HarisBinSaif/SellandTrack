@@ -27,6 +27,8 @@ import kotlinx.android.synthetic.main.fragment_welcome.*
 class InventoryFragment : Fragment() {
     private lateinit var inventoryViewModel: InventoryViewModel
     private lateinit var binding : FragmentInventoryBinding
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

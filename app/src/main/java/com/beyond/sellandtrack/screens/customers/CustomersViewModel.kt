@@ -42,4 +42,8 @@ class CustomersViewModel(application: Application) : AndroidViewModel(applicatio
         repository.addCustomer(customer)
     }
 
+    fun deleteCustomer(number: String) = viewModelScope.launch{
+        repository.deleteCustomer(number)
+    }
+
 }

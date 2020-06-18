@@ -62,6 +62,10 @@
         <action
             android:id="@+id/action_signupFragment_to_loginFragment"
             app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
             app:popUpTo="@id/welcomeFragment" />
     </fragment>
     <fragment
@@ -80,19 +84,54 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_dashboardFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment"
-            app:popUpTo="@id/dashboardFragment"
-            app:popUpToInclusive="true" />
-        <action
             android:id="@+id/action_dashboardFragment_to_manageFragment"
-            app:destination="@id/manageFragment" />
+            app:destination="@id/manageFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
         <action
             android:id="@+id/action_dashboardFragment_to_inventoryFragment"
-            app:destination="@id/inventoryFragment" />
+            app:destination="@id/inventoryFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
         <action
             android:id="@+id/action_dashboardFragment_to_customersFragment"
-            app:destination="@id/customersFragment" />
+            app:destination="@id/customersFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_journalFragment"
+            app:destination="@id/journalFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_returnFragment"
+            app:destination="@id/returnFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
     </fragment>
     <fragment
         android:id="@+id/manageFragment"
@@ -102,6 +141,10 @@
         <action
             android:id="@+id/action_manageFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
             app:popUpTo="@id/dashboardFragment" />
         <action
             android:id="@+id/action_manageFragment_to_addProductFragment"
@@ -124,6 +167,10 @@
         <action
             android:id="@+id/action_inventoryFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
             app:popUpTo="@id/dashboardFragment" />
     </fragment>
     <fragment
@@ -133,6 +180,67 @@
         <action
             android:id="@+id/action_customersFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.beyond.sellandtrack.screens.transactions.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" >
+        <action
+            android:id="@+id/action_transactionFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.beyond.sellandtrack.screens.profile.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.beyond.sellandtrack.screens.journal.JournalFragment"
+        android:label="JournalFragment" >
+        <action
+            android:id="@+id/action_journalFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnFragment"
+        android:name="com.beyond.sellandtrack.screens.returnTransaction.ReturnFragment"
+        android:label="ReturnFragment" >
+        <action
+            android:id="@+id/action_returnFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
             app:popUpTo="@id/dashboardFragment" />
     </fragment>
 </navigation>

@@ -10,6 +10,10 @@ import kotlinx.coroutines.launch
 class ManageViewModel(application: Application) : AndroidViewModel(application) {
     private lateinit var repository: Repository
 
+    init {
+        repository = Repository()
+    }
+
     fun deleteProduct(item_code :String) = viewModelScope.launch{
         repository.removeProduct(item_code)
     }

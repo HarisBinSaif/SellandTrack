@@ -3,12 +3,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingRight="10dp"
     android:layout_marginBottom="10dp"
-    android:background="@drawable/border">
+    android:background="@drawable/border"
+     android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,41 +18,48 @@
 
 
         <TextView
-            android:id="@+id/cust_name"
+            android:id="@+id/item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:paddingLeft="15dp"
             android:paddingTop="10dp"
-            android:text="Hassan Tasir"
+            android:text="Reveipt ID: 35001245"
             android:textColor="@color/basic"
             android:textSize="20dp" />
+        <TextView
+            android:id="@+id/date"
+            android:paddingLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18 June 2019"
+            android:fontFamily="@font/roboto_bold"
+            />
 
         <TextView
-            android:id="@+id/cust_id"
+            android:id="@+id/item_qty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:paddingLeft="15dp"
             android:paddingTop="7dp"
             android:paddingBottom="10dp"
-            android:text="Customer ID: 03014054605"
+            android:text="Products: 1001 | 1002 | 2003"
             android:textColor="@color/black" />
 
 
     </LinearLayout>
 
-
-    <View
-        android:id="@+id/delete_contact"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/delete_icn"
-        android:backgroundTint="@color/basic"
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="1000 pkr"
+        android:textColor="#4CAF50"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
